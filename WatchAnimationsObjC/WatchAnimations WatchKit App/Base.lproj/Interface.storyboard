@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.20" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ib7-G2-CXy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
@@ -34,7 +34,49 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="340" y="418"/>
+            <point key="canvasLocation" x="778" y="615"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Onm-HB-BEp">
+            <objects>
+                <controller hidesWhenLoading="NO" id="ib7-G2-CXy">
+                    <items>
+                        <button width="1" alignment="left" title="Sliding Text" id="P3v-R9-Vb6">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="og3-Nr-9m7"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Moving Button" id="V02-Bk-H2N">
+                            <connections>
+                                <segue destination="Zx9-jR-zsT" kind="push" id="7s6-qG-Ohf"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="513" y="700"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="S24-HI-dz7">
+            <objects>
+                <controller hidesWhenLoading="NO" id="Zx9-jR-zsT" customClass="InterfaceController">
+                    <items>
+                        <group width="1" height="2" alignment="left" id="bZa-XB-Z60"/>
+                        <button width="1" alignment="left" title="Animate!" id="kVn-qi-aXz">
+                            <color key="backgroundColor" red="0.16862745098039217" green="0.60784313725490191" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="15"/>
+                            <connections>
+                                <action selector="animateMovingButton" destination="Zx9-jR-zsT" id="y6A-oh-RUe"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="animateButton" destination="kVn-qi-aXz" id="SdL-5v-cAW"/>
+                        <outlet property="buttonSpacerGroup" destination="bZa-XB-Z60" id="2nf-W3-CUG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="778" y="849"/>
         </scene>
     </scenes>
 </document>

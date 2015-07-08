@@ -1,40 +1,82 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.20" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1p7-v1-lIi">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.20" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1j9-FO-m0L">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
-        <scene sceneID="eLu-gY-gwI">
+        <scene sceneID="tUx-BN-xVG">
             <objects>
-                <controller id="1p7-v1-lIi" customClass="InterfaceController">
+                <controller hidesWhenLoading="NO" id="FPa-nh-f0h" customClass="InterfaceController" customModule="WatchAnimationsSwift_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="Sfg-yG-mar">
+                        <group width="1" alignment="left" id="sYN-kC-mpF">
                             <items>
-                                <imageView width="0.29999999999999999" height="39" alignment="left" image="foursquare" contentMode="scaleAspectFit" id="ape-Yq-tfV"/>
-                                <group width="1" alignment="left" id="qJP-Mr-MXu"/>
-                                <label alignment="left" verticalAlignment="center" text="Foursquare" id="DaE-QS-5MW"/>
+                                <imageView width="0.29999999999999999" height="39" alignment="left" image="foursquare" id="SgS-1q-VNL"/>
+                                <group width="1" alignment="left" id="nXu-rF-6ue"/>
+                                <label height="39" alignment="left" text="Foursquare" id="IhR-aN-i2H"/>
                             </items>
                         </group>
-                        <group width="1" height="18" alignment="left" id="2Oc-H2-7jN"/>
-                        <button width="1" alignment="left" title="Animate!" id="xo5-OT-8oE">
+                        <group width="1" height="18" alignment="left" id="yV1-xO-iA4"/>
+                        <button width="1" alignment="left" title="Animate!" id="lTA-RX-OPq">
                             <connections>
-                                <action selector="animate" destination="1p7-v1-lIi" id="09w-db-KfU"/>
+                                <action selector="animate" destination="FPa-nh-f0h" id="MyD-bE-de5"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="left" title="Reset" id="wR9-Yw-gXq">
+                        <button width="1" alignment="left" title="Reset" id="5T0-BA-8ZP">
                             <connections>
-                                <action selector="reset" destination="1p7-v1-lIi" id="9QP-ec-OWg"/>
+                                <action selector="reset" destination="FPa-nh-f0h" id="m8l-UM-YQV"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
-                        <outlet property="spacerGroup" destination="qJP-Mr-MXu" id="Fof-3t-hmI"/>
+                        <outlet property="spacerGroup" destination="nXu-rF-6ue" id="KTh-Oz-Y5F"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="340" y="418"/>
+            <point key="canvasLocation" x="397" y="732"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="hIY-Ya-bH0">
+            <objects>
+                <controller hidesWhenLoading="NO" id="1j9-FO-m0L">
+                    <items>
+                        <button width="1" alignment="left" title="Sliding Text" id="58y-Mu-JzR">
+                            <connections>
+                                <segue destination="FPa-nh-f0h" kind="push" id="3sW-mD-aE3"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Moving Button" id="nK4-fu-1sg">
+                            <connections>
+                                <segue destination="AMH-Xu-hFc" kind="push" id="jlY-sU-WXt"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="143" y="487"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="guK-mV-r7r">
+            <objects>
+                <controller hidesWhenLoading="NO" id="AMH-Xu-hFc" customClass="InterfaceController" customModule="WatchAnimationsSwift_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="2" alignment="left" id="ZVo-Q1-nyo"/>
+                        <button width="1" alignment="left" title="Animate!" id="Z1Y-Tj-Gx2">
+                            <color key="backgroundColor" red="0.16862745098039217" green="0.60784313725490191" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="15"/>
+                            <connections>
+                                <action selector="animateMovingButton" destination="AMH-Xu-hFc" id="YSZ-yK-8IA"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="animateButton" destination="Z1Y-Tj-Gx2" id="E0a-hg-3wj"/>
+                        <outlet property="buttonSpacerGroup" destination="ZVo-Q1-nyo" id="9fP-Fr-usw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="397" y="449"/>
         </scene>
     </scenes>
 </document>
